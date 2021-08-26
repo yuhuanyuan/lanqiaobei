@@ -1,0 +1,39 @@
+#include<STC15F2K60S2.H>
+#include<intrins.h>
+#include<ds1302.h>
+
+#define uchar unsigned char
+#define uint unsigned int
+
+sbit SDA = P2^1;  
+sbit SCL = P2^0;  
+
+
+uchar code tab[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0xbf,0xff};
+uchar yi,er,san,si,wu,liu,qi,ba;
+extern unsigned char shijian[]={0,30,8,0,0,0,0};
+
+void allinit();
+void Delay1ms();
+void Delay5ms();
+void keyscan();
+void somenop();
+
+
+void display1(uchar yi,uchar er);
+void display2(uchar san,uchar si);
+void display3(uchar wu,uchar liu);
+void display4(uchar qi,uchar ba);
+
+uchar shidu;
+
+void main()
+{
+
+  allinit();
+
+	yi=2;er=0;san=0;si=0;wu=0;liu=1;qi=0;ba=1;
+
+while(1)
+{}
+}
